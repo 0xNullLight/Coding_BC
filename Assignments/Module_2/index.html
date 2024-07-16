@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <header>
+        <!-- Site Title -->
+        <h1>Welcome</h1>
+        <!-- Navigation Menu -->
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!--
+        Each section is divided up so it's easier to work with.
+        Text within section is engulfed with a div element
+        to specify the section's children.
+        -->
+
+        <!-- Hero Banner Section -->
+        <section id="home" class="hero-banner">
+            <div>
+                <h2>Welcome to My Portfolio</h2>
+            </div>
+        </section>
+
+        <div class="page-wrapper">
+            <!-- About Section -->
+            <section id="about" class="page-section">
+                <h2>About Me</h2>
+                <div>
+                    <p>This is the "about me" section.</p>
+                </div>
+            </section>
+
+            <!-- Portfolio Section -->
+            <section id="portfolio" class="page-section">
+                <h2>Work</h2>
+                <div class="flex-container">
+                    <!-- Each box identifying each project is separated via the flex-item -->
+                    
+                    <!-- Project: Run Buddy -->
+                    <a href="#" class="flex-item run-buddy">
+                        <div>
+                            <h3>Run Buddy</h3>
+                            <p>Description of Run Buddy</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Project: LED Wall -->
+                    <a href="#" class="flex-item led-wall">
+                        <div>
+                            <h3>LED Wall</h3>
+                            <p>Description of LED Wall</p>
+                        </div>
+                    </a>
+
+                    <!-- Project: React Calculator -->
+                    <a href="#" class="flex-item react-calc">
+                        <div>
+                            <h3>React Calculator</h3>
+                            <p>Description of React Calculator</p>
+                        </div>
+                    </a>
+
+                    <!-- Project: Pastel Puzzles -->
+                    <a href="#" class="flex-item pastel-puzzles">
+                        <div>
+                            <h3>Pastel Puzzles</h3>
+                            <p>Description of Pastel Puzzles</p>
+                        </div>
+                    </a>
+
+                    <!-- Project: Surf Report -->
+                    <a href="#" class="flex-item surf-report">
+                        <div>
+                            <h3>Surf Report</h3>
+                            <p>Description of Surf Report</p>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="page-section">
+                <h2>Contact Me</h2>
+                <div class="contact">
+                    <address>
+                        <!-- Email Link -->
+                        <a href="mailto:someone@example.com">Email Me</a>
+                        <!-- Phone Link -->
+                        <a href="tel:+123456789">Call Me</a>
+                        <!-- Visit Link -->
+                        <a href="#">Visit Me</a>
+                    </address>
+                </div>
+            </section>
+        </div>
+    </main>
+</body>
+</html>
