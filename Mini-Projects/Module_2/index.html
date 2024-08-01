@@ -11,7 +11,6 @@
 
 <body>
 
-
   <header>
     <h1 class="page-title">
       CSS Snippet Cheatsheet
@@ -30,7 +29,6 @@
           <div class="card-body">
             <p>Use these three properties to create a Flexbox row layout.</p>
           </div>
-          <!-- with the <pre> element, it counts all spaces literally, so proper code indentation cannot be applied in this case -->
           <pre class="code-block"><code>.row {
   display: flex;
   flex-direction: row;
@@ -46,7 +44,7 @@
           </div>
           <pre class="code-block"><code>.column {
   display: flex;
-  flex-direction: column
+  flex-direction: column;
 }</code></pre>
         </figure>
       </div>
@@ -72,8 +70,8 @@
           </div>
           <pre class="code-block"><code>.linear-gradient-background {
   background-image: linear-gradient(
-    rgba(232, 102, 236, 0.3) 0%,
-    rgba(232, 102, 236, 0.6) 100%
+    rgba(120, 150, 255, 0.3) 0%,
+    rgba(120, 150, 255, 0.6) 100%
   );
 }</code></pre>
         </figure>
@@ -91,7 +89,7 @@
 
 .code-card:hover,
 .code-card:hover .card-header {
-  box-shadow: inset 0px 0px 8px rgba(232, 102, 236, 1), 0 0 15px rgba(232, 102, 236, 1);
+  box-shadow: inset 0px 0px 8px rgba(120, 150, 255, 1), 0 0 15px rgba(120, 150, 255, 1);
 }</code></pre>
         </figure>
       </div>
@@ -100,8 +98,7 @@
         <figure class="card code-card">
           <h2 class="card-header">Overlay Card with Title</h2>
           <div class="card-body">
-            <p>Use position properties and negative margins to raise elements higher than their natural starting point.
-            </p>
+            <p>Use position properties and negative margins to raise elements higher than their natural starting point.</p>
           </div>
           <pre class="code-block"><code>.card-header {
   position: relative;
@@ -110,6 +107,97 @@
         </figure>
       </div>
     </section>
+
+    <!-- Divider Section -->
+    <section class="row">
+      <div class="card-column">
+        <figure class="card code-card">
+          <h2 class="card-header" id="css_selectors_n_symbols">CSS Selectors and Symbols</h2>
+          <div class="card-body">
+            <p>This section explains CSS selectors and symbols to help you understand how to target and style HTML elements:</p>
+          </div>
+
+          <!-- Tags Selector -->
+          <section class="row justify-center">
+            <div class="card-column">
+              <figure class="card code-card">
+                <h3 class="card-header">Tags Selector</h3>
+                <div class="card-body">
+                  <p>Use tag names to target HTML elements directly. This applies styles to all instances of the element.</p>
+                </div>
+                <pre class="code-block"><code>p {
+  color: #333;
+}</code></pre>
+              </figure>
+            </div>
+          </section>
+
+          <!-- ID Selector -->
+          <section class="row justify-center">
+            <div class="card-column">
+              <figure class="card code-card">
+                <h3 class="card-header">ID Selector</h3>
+                <div class="card-body">
+                  <p>Use IDs to target a specific element with a unique identifier. IDs must be unique within the page.</p>
+                </div>
+                <pre class="code-block"><code>#header {
+  background-color: #444;
+}</code></pre>
+              </figure>
+            </div>
+          </section>
+
+          <!-- Class Selector -->
+          <section class="row justify-center">
+            <div class="card-column">
+              <figure class="card code-card">
+                <h3 class="card-header">Class Selector</h3>
+                <div class="card-body">
+                  <p>Use classes to target elements with a shared class name. Multiple elements can have the same class.</p>
+                </div>
+                <pre class="code-block"><code>.button {
+  padding: 10px;
+  background-color: #228B22;
+  color: white;
+}</code></pre>
+              </figure>
+            </div>
+          </section>
+
+          <!-- At-Rules -->
+          <section class="row justify-center">
+            <div class="card-column">
+              <figure class="card code-card">
+                <h3 class="card-header">At-Rules</h3>
+                <div class="card-body">
+                  <p>At-rules define special CSS rules, such as media queries, custom fonts, and animations.</p>
+                </div>
+                <pre class="code-block"><code>/* Media Queries */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Font-Face */
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('mycustomfont.woff2') format('woff2');
+}
+
+/* Keyframes */
+@keyframes example {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}</code></pre>
+              </figure>
+            </div>
+          </section>
+
+        </figure>
+      </div>
+    </section>
+
   </main>
 
   <footer>
