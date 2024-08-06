@@ -1,4 +1,3 @@
-
 ### Understanding JavaScript Through Key-Value Structures and Core Concepts
 
 Thinking in terms of key-value pairs is a crucial part of understanding JavaScript, but it fits into a broader set of concepts that are essential for mastering the language. Here’s a comprehensive look at how key-value structures relate to other fundamental aspects of JavaScript:
@@ -149,6 +148,17 @@ Functions in JavaScript are central to the language and can be understood throug
       return x + y;         // Method to add two numbers
     }
   };
+  ```
+
+- **Dynamic Method Assignment**: Methods can be assigned to objects dynamically, allowing flexibility in method definitions.
+
+  ```javascript
+  const person = {};
+  person.sayHello = function() {
+    console.log('Hello!');
+  };
+
+  person.sayHello(); // Output: Hello!
   ```
 
 ---
@@ -314,22 +324,20 @@ Organizing code into reusable modules.
 
 #### 11. **Memory Management and Performance**
 
-Efficiently managing resources and performance.
+Efficiently managing
 
-- **Garbage Collection**: How JavaScript manages memory.
+ memory and optimizing performance.
 
-- **Performance Optimization**: Techniques for writing efficient code.
+- **Garbage Collection**: JavaScript automatically reclaims memory that is no longer in use.
 
----
+  ```javascript
+  // Creating objects and letting go of references
+  let obj = { data: 'some data' };
+  obj = null; // Memory can be reclaimed by garbage collector
+  ```
 
-#### 12. **Understanding the JavaScript Runtime**
-
-The environment where JavaScript executes.
-
-- **Execution Context and Call Stack**: How code execution is managed.
-
-- **Event Loop**: Handles asynchronous operations and their execution.
+- **Performance Tips**: Techniques for improving performance, such as minimizing DOM manipulations and optimizing algorithms.
 
 ---
 
-By integrating the concept of key-value pairs with these core concepts, you gain a more holistic understanding of JavaScript. This foundation enables you to work effectively with objects, functions, scopes, and various JavaScript features, leading to more robust and maintainable code.
+Understanding these key concepts will help you grasp JavaScript more effectively and apply its features to solve various problems. Each concept builds on the others, so mastering them in combination will give you a strong foundation in JavaScript.
