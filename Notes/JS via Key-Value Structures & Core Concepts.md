@@ -133,7 +133,7 @@ Functions in JavaScript are central to the language and can be understood throug
   };
   ```
 
-- **Arrow Functions**: Provide a concise syntax and capture the `this` value of the enclosing context.
+- **Arrow/Lambda Functions**: Provide a concise syntax and capture the `this` value of the enclosing context.
 
   ```javascript
   // Arrow function
