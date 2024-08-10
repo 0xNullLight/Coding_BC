@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Sample markdown files array (in a real application, this could be dynamic)
     const markdownFiles = [
-        { name: "JS_via_Key-Value_Structures&Core_Concepts", url: "./notes/JS_via_Key-Value_Structures&Core_Concepts.md" },
-        { name: "JS_Additional_Concepts&Skills", url: "./notes/JS_Additional_Concepts&Skills.md" }
+        { name: "JS_via_Key-Value_Structures&Core_Concepts", url: "./Notes/JS_via_Key-Value_Structures&Core_Concepts.md" },
+        { name: "JS_Additional_Concepts&Skills", url: "./Notes/JS_Additional_Concepts&Skills.md" }
     ];
 
     // Get the file-list and markdown-content elements
