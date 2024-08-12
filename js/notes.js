@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "JS Additional Concepts & Skills", url: "./Notes/JS_Additional_Concepts&Skills.md" },
         { name: "JS Conditional vs Unconditional", url: "./Notes/JS_Conditional vs Unconditional.md" },
         { name: "JS Understanding Primitive Types,Objects & Functions", url: "./Notes/JS_Understanding_Primitive_Types,Objects&Functions.md" },
-        { name: "JS Objects, Functions & Methods", url: "./Notes/JS_Objects,Functions&Methods.md" }
+        { name: "JS Objects, Functions & Methods", url: "./Notes/JS_Objects,Functions&Methods.md" },
         { name: "JS DOMs & Window Objects", url: "./Notes/JS_DOM&Window_Objects.md" },
         { name: "JS & CSS: Manipulating Classes, IDs and Elements", url: "./Notes/JS&CSS_Classes,IDs,Elements.md" }
     ];
