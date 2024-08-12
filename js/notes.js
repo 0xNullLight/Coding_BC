@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Sample markdown files array (in a real application, this could be dynamic)
     const markdownFiles = [
+        { name: "JS & CSS: Manipulating Classes, IDs and Elements", url: "./Notes/JS&CSS_Classes,IDs,Elements.md" },
         { name: "JS via Key-Value Structures & Core Concepts", url: "./Notes/JS_via_Key-Value_Structures&Core_Concepts.md" },
         { name: "JS Additional Concepts & Skills", url: "./Notes/JS_Additional_Concepts&Skills.md" },
         { name: "JS Understanding Primitive Types,Objects & Functions", url: "./Notes/JS_Understanding_Primitive_Types,Objects&Functions.md" },
