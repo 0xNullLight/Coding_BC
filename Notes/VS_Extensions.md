@@ -26,4 +26,8 @@ Here’s a rundown of some useful extensions for VS Code I found on my journey t
    - **Description**: The Docker extension integrates with Docker to help you build, manage, and deploy containerized applications directly within VS Code. It offers features for working with Dockerfiles, Docker Compose files, and container management.
    - **Link**: [Docker on VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
 
+7. **SQLTools** from *Matheus Teixeira*:
+   - **Description**: A lightweight tool for managing SQL databases, supporting multiple database types like MySQL, PostgreSQL, SQLite, and more. Features include query execution, database navigation, and connection management.
+   - **Link**: [SQLTools on VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=mtxr.sqltools)
+
 These extensions can significantly improve your development workflow and make working in VS Code more efficient and enjoyable.
