@@ -32,16 +32,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function toggleMarkdown(file) {
         if (currentFile === file.url) {
-            // If the same file is clicked again, hide the content
-            markdownContentEl.style.display = 'none';
+            markdownContentEl.innerHTML = "Please select a file from the list to view its contents.";
             currentFile = null;
         } else {
-            // Otherwise, show the content and load the new file
             fetch(file.url)
                 .then(response => response.text())
                 .then(text => {
                     markdownContentEl.innerHTML = marked.parse(text);
-                    markdownContentEl.style.display = 'block';
                     currentFile = file.url;
                 })
                 .catch(error => console.error("Error loading Markdown file:", error));
