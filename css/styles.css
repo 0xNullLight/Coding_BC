@@ -15,45 +15,53 @@ h1 {
     text-shadow: 0 0 10px rgba(0, 208, 132, 0.6);
 }
 
+#main-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
 #file-list {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 20px;
+    width: 250px;
+    margin-right: 20px;
+    padding: 10px;
+    background: rgba(30, 30, 30, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .file-link {
     display: block;
-    padding: 15px;
-    margin: 10px 0;
-    width: 80%;
-    max-width: 600px;
+    padding: 10px 15px;
+    margin: 8px 0;
     background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
+    border-radius: 8px;
     text-decoration: none;
     color: #00d084;
     font-weight: 500;
-    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 208, 132, 0.3);
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 208, 132, 0.2);
 }
 
 .file-link:hover {
     background: rgba(255, 255, 255, 0.2);
     color: #ffffff;
-    box-shadow: 0 6px 15px rgba(0, 208, 132, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 208, 132, 0.4);
 }
 
 #markdown-content {
-    display: none; /* Initially hide the markdown content */
-    margin: 20px auto;
+    width: 70%;
     padding: 20px;
-    width: 80%;
-    max-width: 800px;
     background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0, 208, 132, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 code {
@@ -82,4 +90,15 @@ a {
 a:hover {
     color: #ffffff;
     text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    #main-container {
+        flex-direction: column;
+    }
+
+    #file-list, #markdown-content {
+        width: 100%;
+        margin: 10px 0;
+    }
 }
