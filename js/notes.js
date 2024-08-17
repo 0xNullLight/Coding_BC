@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "JS via Key-Value Structures & Core Concepts", url: "./Notes/JS_via_Key-Value_Structures&Core_Concepts.md" },
         { name: "JS Additional Concepts & Skills", url: "./Notes/JS_Additional_Concepts&Skills.md" },
         { name: "JS vs TS Key-Value Structure", url: "./Notes/JSvsTS_Key-Value_Structure.md" },
-        { name: "NodeJS & NPM Commends, url: "./Notes/NodeJS_NPM_Commends.md" },
+        { name: "NodeJS & NPM Commends", url: "./Notes/NodeJS_NPM_Commends.md" },
         { name: "JS Conditional vs Unconditional", url: "./Notes/JS_Conditional vs Unconditional.md" },
         { name: "JS Understanding Primitive Types,Objects & Functions", url: "./Notes/JS_Understanding_Primitive_Types,Objects&Functions.md" },
         { name: "JS Objects, Functions & Methods", url: "./Notes/JS_Objects,Functions&Methods.md" },
