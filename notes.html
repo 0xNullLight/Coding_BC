@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes (Markdown Viewer)</title>
+    <title>Markdown Notes Viewer</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js" defer></script>
 </head>
 <body>
-    <h1>Notes (Markdown Files)</h1>
-    <div id="main-container">
-        <div id="file-list"></div>
-        <div id="markdown-content"></div>
-    </div>
-    <script src="./js/notes.js"></script>
+    <header>
+        <h1>Markdown Notes Viewer</h1>
+        <select class="dropdown-menu" id="file-dropdown">
+            <!-- Options will be populated by JavaScript -->
+        </select>
+    </header>
+    <main>
+        <section id="main-container">
+            <div id="markdown-content"></div>
+        </section>
+    </main>
+    <script src="./js/notes.js" defer></script>
 </body>
 </html>
