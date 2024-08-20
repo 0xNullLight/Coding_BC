@@ -12,36 +12,40 @@ document.addEventListener("DOMContentLoaded", () => {
         { name: "JS DOMs & Window Objects", url: "./Notes/JS_DOM&Window_Objects.md" },
         { name: "JS & CSS: Manipulating Classes, IDs and Elements", url: "./Notes/JS&CSS_Classes,IDs,Elements.md" }
     ];
-
-    // Get the file-list and markdown-content elements
-    const fileListEl = document.getElementById("file-list");
+    
+    const dropdownEl = document.getElementById("file-dropdown");
     const markdownContentEl = document.getElementById("markdown-content");
 
-    // Variable to keep track of the current file
-    let currentFile = null;
+    // Set default content
+    markdownContentEl.innerHTML = "Select a markdown";
 
-    // Populate the file list
+    // Add default option to the dropdown
+    const defaultOption = document.createElement("option");
+    defaultOption.value = "";
+    defaultOption.textContent = "--Select--";
+    defaultOption.disabled = true;
+    defaultOption.selected = true;
+    dropdownEl.appendChild(defaultOption);
+
+    // Populate the dropdown menu with actual options
     markdownFiles.forEach(file => {
-        const linkEl = document.createElement("a");
-        linkEl.className = "file-link";
-        linkEl.href = "#";
-        linkEl.textContent = file.name;
-        linkEl.addEventListener("click", () => toggleMarkdown(file));
-        fileListEl.appendChild(linkEl);
+        const optionEl = document.createElement("option");
+        optionEl.value = file.url;
+        optionEl.textContent = file.name;
+        dropdownEl.appendChild(optionEl);
     });
 
-    function toggleMarkdown(file) {
-        if (currentFile === file.url) {
-            markdownContentEl.innerHTML = "Please select a file from the list to view its contents.";
-            currentFile = null;
-        } else {
-            fetch(file.url)
+    dropdownEl.addEventListener("change", (event) => {
+        const selectedUrl = event.target.value;
+        if (selectedUrl) {
+            fetch(selectedUrl)
                 .then(response => response.text())
                 .then(text => {
                     markdownContentEl.innerHTML = marked.parse(text);
-                    currentFile = file.url;
                 })
                 .catch(error => console.error("Error loading Markdown file:", error));
+        } else {
+            markdownContentEl.innerHTML = "Select a markdown";
         }
-    }
+    });
 });
