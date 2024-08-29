@@ -190,3 +190,5 @@ You should see an error indicating that the service could not be found, confirmi
 ### Conclusion
 
 By following these steps, you can install and completely uninstall PostgreSQL on Ubuntu 22.04 (Jammy), Linux Mint, and other compatible Linux distros. This guide includes detailed instructions for resolving issues related to missing directories and ensures all associated files and directories are properly managed.
+
+For further details and advanced configuration options, please refer to the [PostgreSQL Documentation](https://www.postgresql.org/docs/current/index.html).
