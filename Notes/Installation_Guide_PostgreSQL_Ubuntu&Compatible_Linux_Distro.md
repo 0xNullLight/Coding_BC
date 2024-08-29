@@ -1,4 +1,4 @@
-### Part 1: Installing PostgreSQL on Linux Mint
+### Part 1: Installing PostgreSQL on Ubuntu 22.04 (Jammy), Linux Mint, and Other Compatible Linux Distros
 
 #### Step 1: Update the Package List
 
@@ -131,7 +131,7 @@ GRANT ALL PRIVILEGES ON DATABASE mydb TO myuser;
 
 Replace `myuser` and `mypassword` with your desired username and password, and `mydb` with your desired database name.
 
-### Part 2: Uninstalling PostgreSQL from Linux Mint
+### Part 2: Uninstalling PostgreSQL from Ubuntu 22.04 (Jammy), Linux Mint, and Other Compatible Linux Distros
 
 #### Step 1: Stop the PostgreSQL Service
 
@@ -189,4 +189,4 @@ You should see an error indicating that the service could not be found, confirmi
 
 ### Conclusion
 
-By following these steps, you can install and completely uninstall PostgreSQL on Linux Mint, including resolving issues related to missing directories and ensuring all associated files and directories are properly managed.
+By following these steps, you can install and completely uninstall PostgreSQL on Ubuntu 22.04 (Jammy), Linux Mint, and other compatible Linux distros. This guide includes detailed instructions for resolving issues related to missing directories and ensures all associated files and directories are properly managed.
