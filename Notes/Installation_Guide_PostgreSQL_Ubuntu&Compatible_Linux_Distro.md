@@ -61,7 +61,7 @@ sudo -i -u postgres
 
 **IF** you encounter the error `sudo: unable to change directory to /var/lib/postgresql: No such file or directory`, follow these additional steps to resolve it.
 
-1. **Check the Existence of PostgreSQL Directories**:
+1. **Check the Existence of PostgreSQL Directories** (Optional):
 
    Verify if the necessary PostgreSQL directories exist:
 
@@ -69,7 +69,7 @@ sudo -i -u postgres
    ls -ld /var/lib/postgresql /etc/postgresql /etc/postgresql-common /var/log/postgresql
    ```
 
-2. **Create Required Directories**:
+2. **Create Required Directories** (Optional):
 
    If the `/var/lib/postgresql` directory is missing, create it and set the correct permissions:
 
@@ -79,7 +79,7 @@ sudo -i -u postgres
    sudo chmod 700 /var/lib/postgresql
    ```
 
-3. **Initialize the PostgreSQL Data Directory**:
+3. **Initialize the PostgreSQL Data Directory** (Optional):
 
    If the directory exists but is not initialized, you might need to initialize it:
 
@@ -89,7 +89,7 @@ sudo -i -u postgres
 
    Replace `$(psql --version | awk '{print $3}' | cut -d'.' -f1,2)` with your PostgreSQL version if necessary.
 
-4. **Start PostgreSQL Service Again**:
+4. **Start PostgreSQL Service Again** (Optional):
 
    Restart PostgreSQL to apply the changes:
 
@@ -97,7 +97,7 @@ sudo -i -u postgres
    sudo systemctl restart postgresql
    ```
 
-5. **Try Switching to the PostgreSQL User Again**:
+5. **Try Switching to the PostgreSQL User Again** (Optional):
 
    Now attempt to switch to the `postgres` user again:
 
@@ -146,7 +146,7 @@ sudo systemctl stop postgresql
 Remove PostgreSQL and its additional packages:
 
 ```bash
-sudo apt remove --purge postgresql postgresql-contrib
+sudo apt-get --purge remove postgresql*
 ```
 
 The `--purge` option removes the packages along with their configuration files.
@@ -177,18 +177,53 @@ sudo rm -rf /var/log/postgresql/
 
 > **Warning**: These commands will permanently delete all PostgreSQL data, configuration files, and logs. Make sure to back up any important data before running these commands.
 
-#### Step 5: Verify Uninstallation
+#### Step 5: Check for Residual Processes (Optional)
 
-To verify that PostgreSQL has been completely removed, check the status of the PostgreSQL service:
+Ensure no PostgreSQL processes are still running:
 
 ```bash
-sudo systemctl status postgresql
+ps aux | grep postgres
 ```
 
-You should see an error indicating that the service could not be found, confirming the removal.
+If you find any processes, kill them using their process ID (PID):
+
+```bash
+sudo kill -9 <PID>
+```
+
+Replace `<PID>` with the actual process ID.
+
+#### Step 6: Check for Residual Systemd Units (Optional)
+
+Verify that no residual systemd services related to PostgreSQL are left:
+
+```bash
+sudo systemctl list-units --type=service | grep postgresql
+sudo systemctl list-unit-files | grep postgresql
+```
+
+If any units are found, remove them:
+
+```bash
+sudo systemctl disable <unit-name>
+sudo rm /etc/systemd/system/<unit-name>.service
+sudo systemctl daemon-reload
+```
+
+Replace `<unit-name>` with the actual service name.
+
+#### Step 7: Search for Residual Files (Optional)
+
+Search for and remove any remaining PostgreSQL-related files:
+
+```bash
+sudo find / -name 'postgresql*' -exec rm -rf {} +
+```
 
 ### Conclusion
 
-By following these steps, you can install and completely uninstall PostgreSQL on Ubuntu 22.04 (Jammy), Linux Mint, and other compatible Linux distros. This guide includes detailed instructions for resolving issues related to missing directories and ensures all associated files and directories are properly managed.
+By following these steps, you can install, verify, and completely uninstall PostgreSQL on Ubuntu 22.04 (Jammy), Linux Mint, and other compatible Linux distros. This guide ensures that all associated files, directories, and processes are properly managed.
 
 For further details and advanced configuration options, please refer to the [PostgreSQL Documentation](https://www.postgresql.org/docs/current/index.html).
+
+---
